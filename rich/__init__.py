@@ -1,0 +1,1 @@
+"""Minimal rich compatibility layer."""
