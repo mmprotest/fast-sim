@@ -81,6 +81,21 @@ fsim sweep sim/config.yaml --out runs/ --runs 3
 fsim summarize runs/ --metric population
 ```
 
+## Full examples
+
+The repository ships runnable scripts for the most common simulation
+scenarios under [`examples/`](examples/):
+
+* `examples/seir_epidemic.py` – step-based SEIR epidemic with metrics
+* `examples/mm1_queue.py` – discrete-event M/M/1 queue and utilisation
+  tracking
+* `examples/traffic_cellular_automata.py` – cellular automaton traffic
+  model measuring flow and density
+
+Execute them with `python examples/<file>.py` to see end-to-end Fast Sim
+workflows and use the exposed `simulate_*` functions as templates for
+your own models.
+
 ## Reproducibility
 
 Randomness is handled by `fast_sim.core.RNG`, a deterministic wrapper over
