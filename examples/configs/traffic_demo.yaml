@@ -1,0 +1,8 @@
+seed: 99
+n_agents: 200
+steps: 100
+record_every: 5
+params:
+  model: queue
+  arrival_rate: 0.3
+  service_rate: 0.4
