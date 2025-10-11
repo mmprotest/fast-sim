@@ -1,0 +1,9 @@
+seed: 123
+n_agents: 100
+steps: 50
+record_every: 1
+params:
+  model: sir
+  beta: 0.15
+  gamma: 0.05
+  initial_infected: 3
