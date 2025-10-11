@@ -1,5 +1,5 @@
 init:
-	pip install -e '.[dev,bench]'
+	pip install -e ".[dev,bench,viz]"
 
 test:
 	pytest -q
@@ -11,10 +11,10 @@ type:
 	mypy src/fast_sim --ignore-missing-imports
 
 examples:
-	python examples/sir_minimal.py
+	fsim run --config examples/configs/sir_demo.yaml --steps 10 --seed 123
 
 bench:
-	fastsim bench --quick
+	fsim bench --quick
 
 dist:
 	python -m build

@@ -14,6 +14,8 @@ from .agents import queue_step, sir_step
 from .config import SimConfig
 from .random import set_seed
 
+__all__ = ["app"]
+
 app = typer.Typer(help="Vectorised micro-simulation toolkit")
 
 
@@ -60,7 +62,7 @@ def info() -> None:
     """Display package information."""
 
     extras = []
-    for extra in ("simpy", "mesa", "rich", "typer", "pyyaml"):
+    for extra in ("simpy", "mesa", "rich", "matplotlib", "pyyaml"):
         extras.append(f"{extra}:{'yes' if importlib.util.find_spec(extra) else 'no'}")
     typer.echo(json.dumps({"version": __version__, "extras": extras}, indent=2))
 
